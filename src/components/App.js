@@ -10,9 +10,9 @@ class App extends React.Component {
         selectedVideo: null
     }
     handleSubmit = async (termFromSearchBar) => {
-        const response = await youtube.get('/search', {
+        const response = await youtube.get('/playlistItems', {
             params: {
-                q: termFromSearchBar
+                playlistId: termFromSearchBar
             }
         })
         this.setState({

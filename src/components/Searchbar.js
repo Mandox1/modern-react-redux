@@ -2,7 +2,7 @@ import React from 'react';
 
 class Searchbar extends React.Component {
     state = {
-        term: 'Default text'
+        term: 'PL_HHVDUftJnQ741TiMQLhZC7ujB1o29oY'
     };
     handleChange = (event) => {
         this.setState({
@@ -12,6 +12,7 @@ class Searchbar extends React.Component {
     handleSubmit = event => {
         event.preventDefault();
         this.props.handleFormSubmit(this.state.term);
+        console.log("Es-> " + this.state.term);
     }
 
     render() {

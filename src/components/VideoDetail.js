@@ -5,8 +5,9 @@ const VideoDetail = ({video}) => {
         return <div>Loading ...</div>;
     }
 
-    const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
-    console.log(typeof(video));
+    const videoSrc = `https://www.youtube.com/embed/${video.snippet.resourceId.videoId}`;
+    // console.log(typeof(video));
+    console.log(videoSrc);
     return (
         <div>
             <div className='ui embed'>
